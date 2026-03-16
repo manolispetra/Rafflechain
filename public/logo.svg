@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2040;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0E1A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD740;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C49A00;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGrad)" stroke="#F5C518" stroke-width="3"/>
+
+  <!-- Outer ring glow -->
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#F5C518" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="8 4"/>
+
+  <!-- Ticket body -->
+  <rect x="30" y="72" width="140" height="56" rx="10" fill="#141B2D" stroke="#F5C518" stroke-width="2"/>
+
+  <!-- Ticket perforated tear line -->
+  <line x1="30" y1="100" x2="170" y2="100" stroke="#F5C518" stroke-width="1.5" stroke-dasharray="5 3" stroke-opacity="0.5"/>
+
+  <!-- Left notch -->
+  <circle cx="30" cy="100" r="8" fill="url(#bgGrad)" stroke="#F5C518" stroke-width="2"/>
+  <!-- Right notch -->
+  <circle cx="170" cy="100" r="8" fill="url(#bgGrad)" stroke="#F5C518" stroke-width="2"/>
+
+  <!-- Star icon on ticket -->
+  <polygon
+    points="100,60 106,83 130,83 111,97 118,120 100,106 82,120 89,97 70,83 94,83"
+    fill="url(#goldGrad)"
+    filter="url(#glow)"
+  />
+
+  <!-- Chain link left -->
+  <rect x="42" y="107" width="22" height="12" rx="6" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <!-- Chain link right -->
+  <rect x="136" y="107" width="22" height="12" rx="6" fill="none" stroke="#00E5FF" stroke-width="2"/>
+  <!-- Chain connector -->
+  <line x1="64" y1="113" x2="136" y2="113" stroke="#00E5FF" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Text: RAFFLE -->
+  <text x="100" y="162" font-family="'Bebas Neue', Impact, sans-serif" font-size="22" font-weight="bold"
+    fill="#F5C518" text-anchor="middle" letter-spacing="6" filter="url(#glow)">RAFFLE</text>
+
+  <!-- Text: CHAIN -->
+  <text x="100" y="182" font-family="'Bebas Neue', Impact, sans-serif" font-size="14"
+    fill="#00E5FF" text-anchor="middle" letter-spacing="10">CHAIN</text>
+</svg>
